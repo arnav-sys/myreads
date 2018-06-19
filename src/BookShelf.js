@@ -4,7 +4,7 @@ class BookShelf extends React.Component {
   state = {};
 
   render() {
-  {/* display the book int he right shelf*/}
+  /* display the book int he right shelf*/
     return (
       <div className="bookshelf">
         <h2 className="bookshelf-title">

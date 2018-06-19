@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
 import "./App.css";
 
@@ -42,10 +42,13 @@ class BookSearch extends React.Component {
     this.setState({ query: query })
     if (query) {
       BooksAPI.search(query, 20).then((books) => {
-        books.length > 0 ?  this.updateData(books)
-        :this.setState({books:[]})
-      })
-    } else this.setState({books:[]}) //With any errors
+        books.length > 0 ? this.updateData(books):this.setState({books:[]})
+      }).catch((e)=> {
+      console.error(`The API responded with an error: ${e}`);
+    })
+    }
+    else
+    {this.setState({books:[]})} //With any errors
   }
 
   /* 
