@@ -5,8 +5,6 @@ import "./App.css";
 
 class BookSearch extends React.Component {
 
-
-
   constructor() {
     super();
     this.state = {
@@ -15,7 +13,12 @@ class BookSearch extends React.Component {
     }
   }
 
-
+  /* 
+  	Update the shelf for each book, 
+  	none if the book is not on any shelf and 
+  	if the id book founds on book shelf 
+  	then set the current book shelf
+  */
   updateData = (books) => {
     const cBooks = books.map(book => {
       //Check where is the book ?
@@ -32,6 +35,9 @@ class BookSearch extends React.Component {
     })
   }
 
+  /* 
+  	Read the query when the user types on and display 20 books by calling search method on BookAPI.js
+  */
   updateQuery = (query) => {
     this.setState({ query: query })
     if (query) {
@@ -39,9 +45,12 @@ class BookSearch extends React.Component {
         books.length > 0 ?  this.updateData(books)
         :this.setState({books:[]})
       })
-    } else this.setState({books:[]})
+    } else this.setState({books:[]}) //With any errors
   }
 
+  /* 
+  	Update the shelf when book shelf changer button is clicked and the shelf changed
+  */
   updateBooks = (book, shelf)=> {
     let current = this.state.books;
     const bookToUpdate = current.filter(cBook => cBook.id === book.id)[0];

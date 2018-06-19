@@ -4,6 +4,7 @@ class BookShelf extends React.Component {
   state = {};
 
   render() {
+  {/* display the book int he right shelf*/}
     return (
       <div className="bookshelf">
         <h2 className="bookshelf-title">
@@ -23,6 +24,7 @@ class BookShelf extends React.Component {
                     }}
                   />
                   <div className="book-shelf-changer">
+              		{/*On change pass the book id and event*/}
                     <select value={book.shelf} onChange={event => this.props.updateShelf(book.id, event)}>
                       <option value="none" disabled>
                         Move to...
@@ -34,6 +36,7 @@ class BookShelf extends React.Component {
                     </select>
                   </div>
                 </div>
+            	{/*Disply the book title and author*/}
                 <div className="book-title">
                   {book.title}
                 </div>
