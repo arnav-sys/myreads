@@ -82,7 +82,7 @@ class BookSearch extends React.Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {this.state.books.map(book =>
+            {this.state.books.filter((book) => (book.imageLinks)).map(book =>
               <li key={book.id} className="book">
                 <div className="book-top">
                   <div
