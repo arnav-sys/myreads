@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as BooksAPI from "./BooksAPI";
-import "./App.css";
+import * as BooksAPI from "../BooksAPI";
+import "../App.css";
 import BookShelf from "./BookShelf";
 
 

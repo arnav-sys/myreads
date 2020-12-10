@@ -1,18 +1,21 @@
-html, body, .root {
+html,
+body,
+.root {
   height: 100%;
 }
 body {
   line-height: 1.5;
 }
-body, .app {
-  background-color: #474440;
+body,
+.app {
+  background-color: white;
 }
 
 /* main page */
 
 .list-books-title {
   padding: 10px 0;
-  background: #62aebf;
+  background: black;
   text-align: center;
 }
 .list-books-title h1 {
@@ -54,12 +57,12 @@ body, .app {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #62aebf;
-  background-image: url('./icons/add.svg');
+  background: black;
+  background-image: url("./icons/add.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-size: 0;
 }
 
@@ -72,11 +75,11 @@ body, .app {
   left: 0;
   z-index: 5;
   display: flex;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 0 6px rgba(0, 0, 0, 0.23);
 }
 .search-books-input-wrapper {
   flex: 1;
-  background: #62aebf;
+  background: black;
 }
 .search-books-bar input {
   width: 100%;
@@ -92,8 +95,8 @@ body, .app {
   left: 15px;
   width: 50px;
   height: 53px;
-  background: #62aebf;
-  background-image: url('./icons/arrow-back.svg');
+  background: black;
+  background-image: url("./icons/arrow-back.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
@@ -149,12 +152,12 @@ body, .app {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #62aebf;
-  background-image: url('./icons/arrow-drop-down.svg');
+  background: black;
+  background-image: url("./icons/arrow-drop-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .book-shelf-changer select {
   width: 100%;
@@ -166,7 +169,7 @@ body, .app {
 /* book cover */
 
 .book-cover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background: #eee;
 }
 .book-cover-title {
